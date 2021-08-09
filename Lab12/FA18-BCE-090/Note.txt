@@ -1,0 +1,5 @@
+This folder contains:
+
+1) Scenario 1 (packet tracer file) before NAT implementation.
+2) Scenario 2 (packet tracer file) after NAT implementation.
+3) PDF document of lab.

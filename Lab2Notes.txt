@@ -1,0 +1,144 @@
+Class A
+{
+first octet for network
+remaining 3 for host
+
+      Network              Host
+0                 0000000.0.0.0
+leading bit fixed 
+Maximum
+127.255.255.255
+127(becasue 2^7=128) as first bit is fixed
+
+ Network portion = 255 =1111111
+ Host Portion =0 =00000000
+Subnet mask: 255.0.0.0 (11111111.00000000.00000000.00000000)
+
+} 
+
+
+CLass B
+
+{
+     Network                 Host
+Starting from 
+128.0                      .0.0
+
+
+Maximum
+101111111(191).255              .255.255
+
+
+Number of network bits=
+Ip address/8+8 = 191.255.255.255/16
+
+subnet mask= 255.255.0.0
+}
+
+
+Class C
+{
+
+        Network                    Host
+
+Starting from    
+Minimum
+192.0.0                           .0
+110 00000
+
+Maximum 
+223.255.255.255/24  
+maximum usable ips 254 
+
+subnetmask= 255.255.255.0
+
+}
+
+Class D
+{
+
+
+Starting from    
+Minimum
+224.0.0.0
+1110 0000
+
+Maximum 
+239.255.255.255/32  
+
+subnetmask= 255.255.255.255
+
+}
+
+Class E
+{
+
+
+Starting from    
+Minimum
+224.0.0.0
+1111 0000
+
+Maximum 
+255.255.255.255/32  
+
+subnetmask= 255.255.255.255
+
+}
+
+Imp points
+{
+-for 20 subnets
+
+     host octet
+     00000000 
+     for 20 2^5=32
+
+     first 5 bits for network
+     11111           000
+     Network         Host
+
+Subnet mask= 255.255.255.248
+
+
+-Classfull A,B,C
+
+-CLassless when Subnetmask made cuz breach of octet for one type
+
+Finding ip of subnet
+-find least significant bit lsb for network
+-then 2^Lsb
+-then keep addding table of that value in host
+
+the ips between can be used
+
+ALWAYS FIRST IP IS FOR NETWORK AND LAST IS FOR BROADCAST!! CANNOT BE USED
+
+-router will know of subnetting when we change the subnet mask
+
+0  1  2  3   4   5   6   7
+1  2  4  8  16  32   64 128
+
+-50 client per subnetwork
+
+ipaddress/ 26
+host octet 11 000000
+-LSB= 2
+-2^6=64
+-then keep adding 64 in that
+
+Subnet mask= 255.255.255.192(128+64)
+
+Subnet ip 2=209.50.1.64/26
+
+usable ip 1.1 to 1.62
+1.64 broadcast
+
+NOW IP is CLASSFULL
+
+}
+
+Task:
+case 1 60 subnetwork 
+
+case 2 300 clients per subnetwork 

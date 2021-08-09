@@ -1,0 +1,175 @@
+  
+
+
+
+
+
+
+
+
+
+data
+
+
+1 -32 genereal I/0  0-32 r1 r2 r2
+2- 64 I/0\  i/0 shcp 
+3- 160 ext 1/0    
+4- 
+                                      Harward Architecture  (programmem and data mem are connected together)
+  
+
+   Program Memory                              Cpu                                  Data memory
+  [             ]                          
+  [   16x16k          16bit                                                         
+  [            ]-------------------[      cpu           ]  --------/-----------[ 32 genereal I/0  0-32 r1 r2 r2
+_ [  16bit->>  ]                                              8bits  8bit      [64 I/0\  i/0 shcp 
+  [   |        ]                                                               [ 160 ext 1/0    
+  [                                                                            [Sram 2048  2k
+
+16k =16*1024= 16384   2*4+2^10= 2^14
+
+address bus=14bits
+pc=adress=14bits
+data bus =16bits
+
+
+
+
+Program cycle
+
+Fetch
+Decode
+Execute
+
+                               Add instruction
+
+
+                 | 0000 | 1101 | 0000 | 1101|
+                   
+                   ---------                        
+
+                   Operator= 000011 ADD with carry
+
+                  r1 ddddd=10000 (Destination)
+                  r2  sssss=01101 (source)
+
+                   ADD r1,r2
+                   6
+
+
+           
+
+                
+
+
+           DDR = data direction registor
+           DDRB= PB7 PB6 5 4 3 2 1 0
+                  1   0                     
+
+Status Registors 
+1- zero
+2- half 
+
+
+            
+                                           main()
+                                        A=2
+                                        B=2                    zeroflag=0
+                                        A=A-B
+                                        C=4
+                                        C=A+B
+
+
+
+
+                
+
+
+       Rjump and Rcall
+                 ret
+
+NOP 1cycle
+
+PORTB |= (2<<PB3)                                     D7 D6 D5 D4 D3 D2 D1 D0
+                                                      0  0  0  0  0  0  0  0 
+                                                     -------------------------
+
+
+
+2<< 1                       00000001
+
+                           00000010
+
+
+PORTB &= ~(1<<PB3)                                    D7 D6 D5 D4 D3 D2 D1 D0
+                                                      1   1  1  1  0  1  1  1 
+                                                     -------------------------
+
+
+SP= 0x08 0XFF
+    SPH   SPL
+
+
+
+
+
+There is Program memory with an Address bus of 16 bits and a data bus of 16bits. write program memroy size in kb.
+
+
+ 
+
+
+
+   Address = 2^16= /1024 64k
+   pc =16
+   databus 16
+   16*64k
+     
+
+ 16*128k
+address 
+pc
+data 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
